@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Declaracion de variables*/
+:root {
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /*background-color: black;*/
+    background-color: var(--color-primario);
+    /*color: white;*/
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+
+/*strong{
+    color: #22D4FD;
+}*/
+
+.header{
+    padding: 2% 0% 0% 15%;  /* Crear espacio, en la parte superior y la parte orisontal izquierda del header */
+}
+
+.header_menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header_menu_link{
+    font-family: var(--fuente-montserrat); /* Estilo de fuente del texto */
+    font-size: 1.5rem; /* CSS Units Rem -> 1 Rem es igual a 16px y si inicialmente tenemos 24px, esto corresponde a 24px/16px=1.5rem */
+    font-weight: 600;
+    color: var(--color-terciario); /* Color del texto */
+    text-decoration: none;
+}
+
+.presentacion{
+    display: flex; /* coloca los cuadrados uno al lado del otro */
+    align-items: center;
+    padding: 6% 15%;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion_contenido{
+    width: 50%; /* CSS Units % -> Responsividad */
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* agrega espacios iguales entre cada cuadrado */
+}
+
+.presentacion_contenido_titulo{
+    font-size: 2.25rem; /* CSS Units Rem -> 1 Rem es igual a 16px y si inicialmente tenemos 36px, esto corresponde a 36px/16px=1.5rem */
+    font-family: var(--fuente-krona);
+}
+
+.titulo-destaque{
+    color: var(--color-terciario);
+}
+
+.presentacion_contenido_texto{
+    font-size: 1.5rem; /* CSS Units Rem -> 1 Rem es igual a 16px y si inicialmente tenemos 24px, esto corresponde a 24px/16px=1.5rem */
+    font-family: var(--fuente-montserrat);
+}
+
+.presentacion_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion_enlaces_subtitulos{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem; /* CSS Units Rem -> 1 Rem es igual a 16px y si inicialmente tenemos 24px, esto corresponde a 24px/16px=1.5rem */
+    font-weight: 400;
+}
+
+.presentacion_enlaces_link{
+    width: 50%; /* CSS Units % -> Responsividad */
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem; /* CSS Units Rem -> 1 Rem es igual a 16px y si inicialmente tenemos 24px, esto corresponde a 24px/16px=1.5rem */
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/*Cambiar de color los botones*/
+.presentacion_enlaces_link:hover{
+    background-color: var(--color-hover);
+}
+
+.presentacion_imagen{
+    width: 50%; /* CSS Units % -> Responsividad -> Para que la imagen solo tome el 50% de la pantalla */
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem; /* CSS Units Rem -> 1 Rem es igual a 16px y si inicialmente tenemos 24px, esto corresponde a 24px/16px=1.5rem */
+    font-weight: 400;
+}
+
+/* Media Queries -> Responsividad -> Podemos definir un ancho máximo de pantalla, en este caso es de 1200px*/
+@media (max-width: 1200px) {
+    .header{
+        padding: 10%;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion_contenido{
+        width: auto;
+    }
+}
